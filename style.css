@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roobert,Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.nav-top{
+    background-color: #fff;
+    height: 50px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1),0 0 2px rgba(0,0,0,.1)!important;
+    justify-content: space-between;
+    display: flex;
+    padding: 0 10px;
+}
+.nav-top .nav-left{
+    display: flex;
+    align-items: center;
+}
+.nav-top .nav-left span{
+    font-weight: bold;
+    padding: 0 1rem;
+    color: #0E0E10;
+    cursor: pointer;
+}
+.nav-top .nav-left span:hover{
+    color: #9147FF;
+}
+.nav-top .nav-left .bar{
+    width: 1px;
+    background-color: rgba(0,0,0,.1);
+    height: 60%;
+    padding: 0!important;
+}
+.nav-top .nav-left .bar{
+    width: 1px;
+    background-color: rgba(0,0,0,.1);
+    height: 60%;
+    padding: 0!important;
+}
+.nav-top .nav-right{
+    display: flex;
+    align-items: center;
+}
+.nav-top .nav-right .buscar{
+    background-color: #F2F2F2;
+    display: flex;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.nav-top .nav-right input{
+    background-color: #E5E5E5;
+    border: none;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+.nav-top .nav-right .lupa{
+    padding: 10px;
+    color: #ccc;
+}
+.nav-top .nav-right input:focus{
+    border:1px solid #9147ff;
+    border-radius: 5px 0 0 5px;
+}
+.nav-top .nav-right input:focus-visible{
+    outline: 0
+}
+.nav-top .nav-right .cadastrar{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.nav-top .nav-right .user{
+    color: #0E0E10;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nav-top .nav-right .user:hover{
+    background-color: #E5E5E5;
+}
+.entrar{
+    padding: 7px;
+    background-color: #F2F2F2;
+    color: #0E0E10;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cadastrar{
+    padding: 7px;
+    background-color: #9147FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cadastrar:hover{
+    background-color: #772CE8;
+}
+.entrar:hover{
+    background-color: #E5E5E5;
+}
