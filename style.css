@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: Roobert,Inter,Helvetica Neue,Helvetica,Arial,sans-serif; */
+    font-family: Roobert,Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 .nav-top{
     background-color: #fff;
@@ -125,4 +125,131 @@
 .content{
     width: calc(100% - 320px);
     float: left;
+    margin-top: 2px;
+}
+.content h1{
+    color: #0E0E10;
+}
+.content h1 span{
+    color: #772CE8;
+}
+.content .lives h1{
+    display: block;
+}
+.content .lives{
+    background-color: #F7F7F9;
+    padding: 10px;
+    float: left;
+    width: calc(100% - 55px);
+}
+.content .lives .live{
+    float: left;
+    padding: 10px 0;
+    width: calc(33.33% - 10px);
+    margin: 5px;
+}
+.content .lives .live .tela{
+    position: relative;
+}
+.content .lives .live .tela .info{
+    background-color: #EC1B16;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 3px 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.content .lives .live .tela .espec{
+    background-color: #000000a8;
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    padding: 3px 4px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.content .lives .live .tela img{
+    width: 100%;
+}
+.content .lives .live .descricao img{
+    border-radius: 100%;
+    margin: 10px 10px 0 0;
+    width: 40px;
+    float: left;
+}
+.content .lives .live .descricao h4{
+    float: left;
+    width: calc(100% - 50px);
+    margin: 10px 0 5px 0;
+}
+.content .lives .live .descricao h5{
+    padding: 2px 0;
+    color: #777;
+    margin-left: 50px;
+}
+.content .lives .live .descricao .tags{
+    width: 100%;
+    float: left;
+    margin-left: 50px;
+}
+.content .lives .live .descricao .tag{
+    background-color: #E9E9EB;
+    padding: 3px 4px;
+    color: #0E0E10;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    float: left;
+    margin: 3px;
+}
+.content .categorias{
+    margin-top: 5px;
+    background-color: #F7F7F9;
+    padding: 10px;
+    float: left;
+    width: calc(100% - 55px);
+}
+.content .categorias .jogos{
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+}
+.content .categorias .jogos .jogo{
+    width: 140px;
+    margin: 10px;
+}
+.content .categorias .jogos .jogo img{
+    width: 150px;
+}
+.content .categorias .jogos .jogo h4{
+    float: left;
+    width: 100%;
+    margin: 10px 0 5px 0;
+    word-break: break-all;
+    font-size: 14px;
+}
+.content .categorias .jogos .jogo h5{
+    padding: 2px 0;
+    color: #777;
+    float: left;
+    font-size: 12px;
+}
+.content .categorias .jogos .jogo .tags{
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+}
+.content .categorias .jogos .jogo .tag{
+    background-color: #E9E9EB;
+    padding: 3px 4px;
+    color: #0E0E10;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    float: left;
+    margin: 3px;
 }
