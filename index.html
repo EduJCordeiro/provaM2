@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.png"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400&display=swap" rel="stylesheet">
     <link  rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <title>Twitch</title>
 </head>
 <body>
-    <nav class="nav-top">
+    <!-- <nav class="nav-top">
         <div class="nav-left">
             <img src="images/logo.png" alt="logo">
             <span>Procurar</span>
@@ -29,14 +31,120 @@
             <i class="far fa-user user"></i>
         </div>
     </nav>
-    <header>
-        asdasd
-    </header>
-    <section>
-        asdasd
+    <header class="header-left">
+        <h1>
+            Participe da comunidade <br> <span>Twitch</span> !
+        </h1>
+        <p>
+            Descubra as melhores <br> transmissões ao vivo em <br> qualquer lugar.
+        </p>
+        <button class="cadastrar">Cadastrar-se</button>
+        
+        <h1>
+            <img src="images/logoBTS.jpg" alt="Logo"><br>
+            Cadastre-se <br> para aproveitar <br> o melhor de <span>BeyondTheS</span>...
+        </h1>
+        <p>
+            Converse com outros fãs <br> Capture seus momentos <br> favoritos <br> Segia para receber <br> notificações quando o canal <br> entrar ao vivo
+        </p>
+        <button class="cadastrar">Cadastrar-se</button>
+    </header> 
+    <section class="content">
     </section>
-    <section>
-        asdasd
-    </section>
+-->
+    <div id="ativos" class="ativos"></div>
+    <style>
+        .ativos{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .ativo{
+            width: 300px;
+            text-align: center;
+            border: 1px solid #000;
+            float: left;
+            color: #fff;
+            text-shadow: 0 0 0 #000;
+            font-family: 'IBM Plex Sans', sans-serif;
+            letter-spacing: 1px;
+            text-shadow: .5px .5px 0 rgb(51 50 55 / 29%);
+            height: 130px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .ativo h1{
+            font-size: 2rem;
+        }
+        .ativo h4{
+            font-size: 1.1rem;
+        }
+        .ativo h5{
+            font-size: .9rem;
+            margin-top: 5px;
+        }
+    </style>
+<script>
+    ativos();
+
+    function ativos(){
+        
+    fetch('http://gsx2json.com/api?id=1eXuH6zQzJvWOs5G5ZMk9cZMWI1iqL32VTvcTTuWpLpA&sheet=1', { method: 'GET' })
+        .then(function(response){
+            response.json().then(function(data){
+
+                document.getElementById("ativos").innerHTML = "";
+
+                var ids = data.rows;
+                
+                ids.forEach((id, index) => {
+                    var divTudo = document.getElementById("ativos");
+                    var divNova = document.createElement("div");
+                    divTudo.appendChild(divNova);
+                    divNova.setAttribute('id', id.asset);
+                    divNova.setAttribute('class', 'ativo');
+
+                    var variation = id.variation.replace(",", ".");
+                    
+                    document.getElementById(id.asset).innerHTML = "<h1>"+id.asset+"</h1><h4>"+id.price+"</h4><h5>"+(parseFloat(variation) * 100).toFixed(2).replace('.', ',')+"%</h5>";
+
+                    if(variation >= 0.05){                            
+                        document.getElementById(id.asset).style.background = "#215E2D";
+                    }else if(variation > 0){                            
+                        document.getElementById(id.asset).style.background = "#518652";
+                    }else if(variation <= -0.05){
+                        document.getElementById(id.asset).style.background = "#AA2122";
+                    }else if(variation == 0){
+                        document.getElementById(id.asset).style.background = "#7EC17F";
+                    }else{
+                        document.getElementById(id.asset).style.background = "#C84041";
+                    }
+                });
+            });
+        })
+        .catch(function(err) { console.error(err) }); 
+    }
+
+        setInterval(() => {
+            ativos();
+        }, 1000000);
+</script>
 </body>
 </html>
+
+<!-- 
+#ED1C24 -> vermelho
+#E55151 -> vermeho claro
+#FF4848 -> vermeho claro
+#22B14C -> verde
+#007110 -> verde
+#009A16 -> verde
+#F28E00 -> laranja
+#005884 -> azul
+#EBEBEB -> cinza
+#F7F7F7 -> cinza
+#DFDFDF -> cinza
+ -->
